@@ -9,4 +9,6 @@ if __name__ == "__main__":
 
     calculo = despachantes.select("data").groupBy(year("data")).count()
     calculo.write.format("console").save()
+    spark.stop()
     
+#spark-submit /home/william/git/pyspark/codigos/atividade50.py /home/william/git/Learning/Fernando_Amaral/download/despachantes.csv
